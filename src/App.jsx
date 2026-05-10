@@ -6,6 +6,7 @@ import Banner from './Components/Banner/Banner'
 import DigitalTools from './Components/DigitalTools/DigitalTools'
 import Nav from './Components/Nav/Nav'
 import Stats from './Components/Stats/Stats'
+import GetStared from './Components/GetStarted/GetStared'
 
 const fetchData = async () => {
   const res = await fetch("/data.json")
@@ -21,6 +22,7 @@ function App() {
       <Banner></Banner>
       <Stats></Stats>
       <DigitalTools DataPromise={DataPromise} cartItems={cartItems} setCartItems={setCartItems}></DigitalTools>
+      <GetStared></GetStared>
     </>
   )
 }

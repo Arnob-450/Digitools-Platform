@@ -19,7 +19,7 @@ const ExploreTools = ({ DataPromise, setCartItems, cartItems }) => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
             {toolsData.map((data, index) => (
-                <div key={index} className="border-2 border-gray-200 rounded-4xl p-6 flex flex-col justify-between min-w-full min-h-[480px]">
+                <div key={index} className="border-2 border-gray-200 rounded-4xl p-6 flex flex-col justify-between min-w-full min-h-120">
                     <div className="flex items-center justify-between mb-4">
                         <div className="border-2 border-gray-300 p-2.5 rounded-full">
                             <img src={data.icon} alt={data.name} />
