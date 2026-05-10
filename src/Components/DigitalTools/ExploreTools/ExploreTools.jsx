@@ -1,16 +1,25 @@
-import { use } from "react";
+import { use, useState } from "react";
 import { IoCheckmark } from "react-icons/io5";
 
 
 
-const ExploreTools = ({ DataPromise }) => {
-    const data = use(DataPromise);
-    console.log(data);
+
+const ExploreTools = ({ DataPromise, setCartItems, cartItems }) => {
+    const [selectedItems, setSelectedItems] = useState([]);
+    const toolsData = use(DataPromise);
+    console.log(toolsData);
+    const handleCartItem = (item) => {
+        if (!cartItems.some(cartItem => cartItem.id === item.id)) {
+            setCartItems([...cartItems, item]);
+            setSelectedItems([...selectedItems, item.id]);
+        }
+    }
+    
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
-            {data.map((data, index) => (
-                <div key={index} className="border-2 border-gray-200 rounded-4xl p-6 flex flex-col justify-between min-w-full min-h-[420px]">
+            {toolsData.map((data, index) => (
+                <div key={index} className="border-2 border-gray-200 rounded-4xl p-6 flex flex-col justify-between min-w-full min-h-[480px]">
                     <div className="flex items-center justify-between mb-4">
                         <div className="border-2 border-gray-300 p-2.5 rounded-full">
                             <img src={data.icon} alt={data.name} />
@@ -39,7 +48,7 @@ const ExploreTools = ({ DataPromise }) => {
                             ))}
                         </ul>
                     </div>
-                    <button className="btn btn-primary rounded-4xl bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white">Buy Now</button>
+                    <button onClick={() => handleCartItem(data)} className={`${selectedItems.includes(data.id) ? "btn btn-active text-black" : "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"} btn  rounded-4xl `}>{selectedItems.includes(data.id) ? "Selected" : "Buy Now"}</button>
                 </div>
             ))}
         </div>

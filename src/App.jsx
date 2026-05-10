@@ -1,5 +1,6 @@
 
 
+import { useState } from 'react'
 import './App.css'
 import Banner from './Components/Banner/Banner'
 import DigitalTools from './Components/DigitalTools/DigitalTools'
@@ -13,12 +14,13 @@ const fetchData = async () => {
 }
 function App() {
   const DataPromise = fetchData();
+  const [cartItems, setCartItems] = useState([]);
   return (
     <>
-      <Nav></Nav>
+      <Nav cartItems={cartItems}></Nav>
       <Banner></Banner>
       <Stats></Stats>
-      <DigitalTools DataPromise={DataPromise}></DigitalTools>
+      <DigitalTools DataPromise={DataPromise} cartItems={cartItems} setCartItems={setCartItems}></DigitalTools>
     </>
   )
 }

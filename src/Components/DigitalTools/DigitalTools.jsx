@@ -3,7 +3,7 @@ import ExploreTools from "./ExploreTools/ExploreTools";
 import Cart from "./Cart/Cart";
 
 
-const DigitalTools = ({ DataPromise }) => {
+const DigitalTools = ({ DataPromise, cartItems, setCartItems }) => {
     const [toggle, setToggle] = useState("explore");
     return (
         
@@ -14,7 +14,7 @@ const DigitalTools = ({ DataPromise }) => {
                 <div className="flex items-center justify-center  border-2 border-[#E1E7FF] w-max mx-auto mb-10 rounded-full">
                     <div className="flex flex-row md:flex-row items-center ">
                         <button className={` btn ${toggle==="explore"? 'bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white' : 'btn-ghost bg-[#ffffff] text-[#25065D] font-bold'}   rounded-full`} onClick={() => setToggle("explore")}>Explore Tools</button>
-                        <button className={` btn ${toggle==="cart"? 'bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white' : 'btn-ghost bg-[#ffffff] text-[#25065D] font-bold'}   rounded-full`} onClick={() => setToggle("cart")}>Cart (2)</button>
+                        <button className={` btn ${toggle==="cart"? 'bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white' : 'btn-ghost bg-[#ffffff] text-[#25065D] font-bold'}   rounded-full`} onClick={() => setToggle("cart")}>Cart ({cartItems.length})</button>
                     </div>
                 </div>
 
@@ -22,13 +22,13 @@ const DigitalTools = ({ DataPromise }) => {
                     {toggle === "explore" ? (
                         <div>
                             <Suspense fallback={<div>Loading...</div>}>
-                               <ExploreTools DataPromise={DataPromise} /> 
+                               <ExploreTools DataPromise={DataPromise} cartItems={cartItems} setCartItems={setCartItems} /> 
                             </Suspense>
                         </div>
                     ) : (
                         <div>
                             <Suspense fallback={<div>Loading...</div>}>
-                                <Cart />
+                                <Cart cartItems={cartItems} setCartItems={setCartItems} />
                             </Suspense>
                         </div>
                     )}
