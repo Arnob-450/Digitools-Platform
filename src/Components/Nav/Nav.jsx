@@ -36,7 +36,7 @@ const Nav = () => {
                         <div className="flex items-center">  <IoCartOutline /></div>
                         <a className="btn btn-ghost rounded-4xl">Login</a>
                     </div>
-                    <a className="btn rounded-4xl bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white">Get Started</a>
+                    <a className="btn rounded-4xl bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white">Get Started</a>
                 </div>
             </div>
         </div>
