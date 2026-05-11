@@ -1,16 +1,23 @@
-# React + Vite
+🚀 Digitools Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern digital tools platform built for speed, simplicity, and user-friendly experiences.
 
-Currently, two official plugins are available:
+📖 About The Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Digitools Platform is a powerful and modern web application that provides useful digital tools in one place.
+The platform is designed with a clean UI, responsive layout, and smooth user experience to help users access tools efficiently from any device.
 
-## React Compiler
+🛠️ Technologies Used
+<p align="left"> <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" /> <img src="https://img.shields.io/badge/React.js-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" /> <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" /> <img src="https://img.shields.io/badge/DaisyUI-5A0EF8?style=for-the-badge&logo=saopaulo&logoColor=white" /> </p>
+✨ Features
+⚡ Fast Performance
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Built with Vite + React for lightning-fast development and optimized performance.
 
-## Expanding the ESLint configuration
+🎨 Modern Responsive UI
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Designed using Tailwind CSS and DaisyUI to ensure a beautiful and mobile-friendly interface.
+
+🧰 Multiple Digital Tools
+
+Provides various useful tools in a single platform for better productivity and convenience.
