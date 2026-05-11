@@ -1,5 +1,6 @@
 import { use, useState } from "react";
 import { IoCheckmark } from "react-icons/io5";
+import { toast } from "react-toastify";
 
 
 
@@ -12,6 +13,9 @@ const ExploreTools = ({ DataPromise, setCartItems, cartItems }) => {
         if (!cartItems.some(cartItem => cartItem.id === item.id)) {
             setCartItems([...cartItems, item]);
             setSelectedItems([...selectedItems, item.id]);
+            toast.success(`${item.name} added to cart!`);
+        }
+        else {            toast.error(`${item.name} is already in the cart!`);
         }
     }
     
